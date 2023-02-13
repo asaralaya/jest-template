@@ -2,13 +2,16 @@
   "name": "jest-template",
   "version": "1.0.0",
   "description": "Package for generating bare-bone for jest unit test spec files # My Awesome Greeter",
-  "main": "index.js",
-  "types": "lib/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
+    "prepublish": "tsc",
     "preversion" : "npm run lint"
 
   },
@@ -17,10 +20,8 @@
     "url": "git@github.com-asaralaya:asaralaya/jest-template.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "files": ["lib/**/*"],
-  
+  "author": "Abhishek P N",
+  "license": "ISC",  
   "devDependencies": {
     "prettier": "^2.8.4",
     "tslint": "^6.1.3",

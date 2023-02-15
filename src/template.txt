@@ -1,0 +1,19 @@
+{{imports}}
+
+describe('{{ClasstName}}', () => {
+  let component: {{ClasstName}};
+
+  beforeAll(() => {
+    component = new {{ClasstName}}(
+    );
+  });
+
+  beforeEach(() => {
+    jest.clearAllMocks();
+    jest.resetAllMocks();
+  });
+
+  it('should create a instance of component', () => {
+    expect(component).toBeTruthy();
+  });
+  });

@@ -12,8 +12,7 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepublish": "tsc",
-    "preversion" : "npm run lint"
-
+    "preversion": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -21,8 +20,9 @@
   },
   "keywords": [],
   "author": "Abhishek P N",
-  "license": "ISC",  
+  "license": "ISC",
   "devDependencies": {
+    "@types/node": "^18.13.0",
     "prettier": "^2.8.4",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",

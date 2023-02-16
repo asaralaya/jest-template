@@ -1,10 +1,10 @@
 {{imports}}
 
-describe('{{ClasstName}}', () => {
-  let component: {{ClasstName}};
+describe('{{ClassName}}', () => {
+  let component: {{ClassName}};
 
   beforeAll(() => {
-    component = new {{ClasstName}}(
+    component = new {{ClassName}}(
     );
   });
 

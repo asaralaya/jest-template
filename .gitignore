@@ -1,6 +1,4 @@
 node_modules
-tsconfig.json
-tslint.json
 .prettierrc
-dist
 .gitignore
+

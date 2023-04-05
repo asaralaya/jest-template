@@ -3,7 +3,7 @@
   * @param  {string} directoryPath - The path for the directory where the search for files should take place
   * @param  {Array} pattern - The extension/pattern for files for the search
   * @param  {Array} excludeFolders - The folders that needs to be excluded from the search
-  * @description - This file conttains methods that will be used to find every file with the desired extention, even if its deeply nested in subfolders using recursion and other util methods
+  * @description - This method will be used to find every file with the desired extention, even if its deeply nested in subfolders using recursion.
   */
 
 const path = require('path');
@@ -12,7 +12,7 @@ const util = require('util');
 const fsReaddir = util.promisify(fs.readdir);
 const fsLstat = util.promisify(fs.lstat);
 
-async function getFilesInDirectoryAsync(directoryPath, pattern = [], excludeFolders = []) {
+const getFilesInDirectoryAsync = async (directoryPath, pattern = [], excludeFolders = []) => {
     let files = [];
     const filesFromDirectory = await fsReaddir(path.resolve(directoryPath)).catch(err => {
         throw new Error(err.message);
@@ -38,14 +38,20 @@ async function getFilesInDirectoryAsync(directoryPath, pattern = [], excludeFold
     return files;
 }
 
-function decorateData(data) {
+/**
+  * @since - release-1.0.0
+  * @param  {Object} data - Object containing imports array,constructor object
+  * @param  {function} decorateCallback - Callback function for async 
+  * @description - This method is used to decorate the import statements and constructor definitions for using in the spec file
+  */
+const decorateData = (data, decorateCallback) => {
     const imports = []
     const constructorInit = []
     const constructorDefinition = []
-    data.importsArray.forEach(function (arrayItem) {
+    data?.importsArray?.forEach(function (arrayItem) {
         imports.push(`import { ${arrayItem.value} } from '${arrayItem.source}';`)
     })
-    let constructorObj = Object.assign({}, ...data.constructorArray);
+    let constructorObj = Object.assign({}, ...data?.constructorArray);
     constructorObj?.value?.params.forEach((item) => {
         item.parameter ?
             (constructorInit.push(`const ${item?.parameter?.name} :Partial<${item?.parameter?.typeAnnotation?.typeAnnotation?.typeName?.name}> ={};`),
@@ -53,7 +59,7 @@ function decorateData(data) {
             (constructorInit.push(`const ${item?.name} :Partial<${item?.typeAnnotation?.typeAnnotation?.typeName?.name}> ={};`),
                 constructorDefinition.push(`${item?.name} as ${item?.typeAnnotation?.typeAnnotation?.typeName?.name}`))
     })
-    return { className:data.className, imports: imports.join('\n'), constructorInit: constructorInit.join('\n\t'), constructorDefinition: constructorDefinition.join(',\n\t\t\t') }
+    decorateCallback(null, { className: data.className, imports: imports.join('\n'), constructorInit: constructorInit.join('\n\t'), constructorDefinition: constructorDefinition.join(',\n\t\t\t') })
 }
 
 module.exports = { getFilesInDirectoryAsync, decorateData }

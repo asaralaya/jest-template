@@ -15,7 +15,9 @@
     "url": "git@github.com-asaralaya:asaralaya/jest-template.git"
   },
   "dependencies": {
-    "@typescript-eslint/typescript-estree": "^5.55.0"
+    "@typescript-eslint/typescript-estree": "^5.55.0",
+    "typescript":"5.0.3",
+    "async": "3.2.4"
   },
   "keywords": [],
   "author": "Abhishek P N",

@@ -2,11 +2,12 @@
   * @since - release-1.0.0
   * @param  {string} fileName - The filename for which spec file needs tto be created
   * @param  {Object} parsedData - Object containing the required data from parsed file
+  * @param  {function} createSpecCallback - Callback function for async
   * @description - This method will be used to find every file with the desired extention, even if its deeply nested in subfolders using recursion.
   */
 const fs = require('fs');
 
-const createSpecfile = function (fileName, parsedData) {
+const createSpecfile = (fileName, parsedData, createSpecCallback) => {
     let indexPosition = fileName.lastIndexOf('.')
     fileName = fileName.split('');
     // Insert the string at the index position
@@ -45,12 +46,17 @@ describe('${parsedData.className}', () => {
 });`;
 
         fs.writeFile(specFilePath, data, 'utf8', function (err) {
-            if (err) return console.log(err);
-            console.log("Spec file created ✅:", specFilePath)
+            if (err) {
+                createSpecCallback(new Error("Failed to spec file for ", specFilePath))
+            } else {
+                console.log("Spec file created ✅:", specFilePath)
+                createSpecCallback()
+            }
         });
     }
     else {
         console.log("Spec file already exists❗:", specFilePath)
+        createSpecCallback()
     }
 }
 

@@ -2,11 +2,8 @@
   "name": "jest-template",
   "version": "1.0.0",
   "description": "Package for generating bare-bone structure for jest unit test spec files!",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "/dist"
-  ],
+  "main": "./src/templateBuilder.js",
+  
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
   },
@@ -24,5 +21,8 @@
   "license": "ISC",
   "devDependencies": {
     "prettier": "^2.8.4"
-  }
+  },
+  "bin":{
+    "jest-template":"./src/templateBuilder.js"
+  } 
 }

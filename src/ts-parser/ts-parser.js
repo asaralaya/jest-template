@@ -1,7 +1,7 @@
 /**
   * @since - release-1.0.0
   * @param  {File} fileName - The filename that need to be parsed
-  * @param  {Function} parseFileCallback - Callback function for async 
+  * @param  {function} parseFileCallback - Callback function for async 
   * @description - This method will be used to parse the ts file to get all the imports and constructor definitions
   */
 const path = require('path');

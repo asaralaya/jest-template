@@ -1,4 +1,4 @@
-
+#!/usr/bin/env node
 /**
   * @since - release-1.0.0
   * @description - Main file for execution
@@ -36,7 +36,6 @@ utils.getFilesInDirectoryAsync(userDirectory, patterns).then((data) => {
             if (err) {
                 console.log(err)
             } else {
-                console.log("res in waterfall", result);
                 arrayCallback(null, filePath)
             }
         })

@@ -6,6 +6,7 @@
   * @description - This method will be used to find every file with the desired extention, even if its deeply nested in subfolders using recursion.
   */
 const fs = require('fs');
+const chalk=require('chalk')
 
 const createSpecfile = (fileName, parsedData, createSpecCallback) => {
     let indexPosition = fileName.lastIndexOf('.')
@@ -47,15 +48,15 @@ describe('${parsedData.className}', () => {
 
         fs.writeFile(specFilePath, data, 'utf8', function (err) {
             if (err) {
-                createSpecCallback(new Error("Failed to spec file for ", specFilePath))
+                createSpecCallback(new Error(chalk.red.bold("Failed to spec file for ", specFilePath)))
             } else {
-                console.log("Spec file created ✅:", specFilePath)
+                console.log(chalk.green.bold("Spec file created ✅:",chalk.underline( specFilePath)))
                 createSpecCallback()
             }
         });
     }
     else {
-        console.log("Spec file already exists❗:", specFilePath)
+        console.log(chalk.red.bold("Spec file already exists❗:", chalk.underline(specFilePath)))
         createSpecCallback()
     }
 }

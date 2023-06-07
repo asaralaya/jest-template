@@ -3,26 +3,34 @@
   "version": "1.0.0",
   "description": "Package for generating bare-bone structure for jest unit test spec files!",
   "main": "./src/templateBuilder.js",
-  
   "scripts": {
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com-asaralaya:asaralaya/jest-template.git"
+    "url": "https://github.com/asaralaya/jest-template"
   },
   "dependencies": {
     "@typescript-eslint/typescript-estree": "^5.55.0",
-    "typescript":"5.0.3",
-    "async": "3.2.4"
+    "async": "3.2.4",
+    "chalk": "^4.1.2",
+    "typescript": "5.0.3"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "typescript",
+    "jest",
+    "plugin",
+    "template",
+    "generator"
+  ],
   "author": "Abhishek P N",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "prettier": "^2.8.4"
   },
-  "bin":{
-    "jest-template":"./src/templateBuilder.js"
-  } 
+  "type": "commonjs",
+  "bin": {
+    "jest-template": "./src/templateBuilder.js"
+  }
 }

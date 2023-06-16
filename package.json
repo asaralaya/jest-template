@@ -14,6 +14,7 @@
     "@typescript-eslint/typescript-estree": "^5.55.0",
     "async": "3.2.4",
     "chalk": "^4.1.2",
+    "prompts": "^2.4.2",
     "typescript": "5.0.3"
   },
   "keywords": [
@@ -31,6 +32,6 @@
   },
   "type": "commonjs",
   "bin": {
-    "jest-template": "./src/templateBuilder.js"
+    "jest-template": "./src/prompt.js"
   }
 }

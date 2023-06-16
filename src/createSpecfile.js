@@ -50,13 +50,13 @@ describe('${parsedData.className}', () => {
             if (err) {
                 createSpecCallback(new Error(chalk.red.bold("Failed to spec file for ", specFilePath)))
             } else {
-                console.log(chalk.green.bold("Spec file created ✅:",chalk.underline( specFilePath)))
+                console.log(chalk.green.bold("Spec file created ✅:"),chalk.green( specFilePath))
                 createSpecCallback()
             }
         });
     }
     else {
-        console.log(chalk.red.bold("Spec file already exists❗:", chalk.underline(specFilePath)))
+        console.log(chalk.red.bold("Spec file exists  ❗:"), chalk.red(specFilePath))
         createSpecCallback()
     }
 }

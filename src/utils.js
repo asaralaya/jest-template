@@ -12,7 +12,7 @@ const util = require('util');
 const fsReaddir = util.promisify(fs.readdir);
 const fsLstat = util.promisify(fs.lstat);
 
-const getFilesInDirectoryAsync = async (directoryPath, pattern = [], excludeFolders = []) => {
+const getFilesInDirectoryAsync = async (directoryPath, pattern, excludeFolders = []) => {
     let files = [];
     const filesFromDirectory = await fsReaddir(path.resolve(directoryPath)).catch(err => {
         throw new Error(err.message);

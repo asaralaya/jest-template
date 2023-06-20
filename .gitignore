@@ -3,3 +3,5 @@ node_modules
 .gitignore
 exampleFolder
 .DS_Store
+coverage
+

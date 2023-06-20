@@ -1,7 +1,10 @@
 #!/usr/bin/env node
 /**
   * @since - release-1.0.0
-  * @description - Main file for execution
+  * @description - Entrypoint for execution
+    @param  {string} userDirectory - The path for the directory where the search for files should take place. Input is recieved from promt
+  * @param  {Array} patterns - The extension/pattern for files for the search. Input is provided from the prompt
+  * @param  {Array} exclusions - The folders that needs to be excluded from the search. Input is provided from the prompt
   **/
 const utils = require("./utils");
 const createSpecfile = require("./createSpecFile");

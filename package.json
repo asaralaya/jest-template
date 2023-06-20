@@ -1,10 +1,11 @@
 {
-  "name": "jest-template",
+  "name": "ng-test-gen",
   "version": "1.0.0",
   "description": "Package for generating bare-bone structure for jest unit test spec files!",
-  "main": "./src/templateBuilder.js",
+  "main": "./src/prompt.js",
   "scripts": {
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\""
+    "test": "jest --silent",
+    "test-coverage": "jest --silent --ci --collectCoverage=true --coverageReporters=lcov"
   },
   "repository": {
     "type": "git",
@@ -25,9 +26,15 @@
     "template",
     "generator"
   ],
+  "jest": {
+    "testPathIgnorePatterns": ["./test/example/*"]
+  },
   "author": "Abhishek P N",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^29.5.2",
+    "coveralls": "^3.1.0",
+    "jest": "^29.5.0",
     "prettier": "^2.8.4"
   },
   "type": "commonjs",

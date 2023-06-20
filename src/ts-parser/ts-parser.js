@@ -4,7 +4,6 @@
   * @param  {function} parseFileCallback - Callback function for async 
   * @description - This method will be used to parse the ts file to get all the imports and constructor definitions
   */
-const path = require('path');
 const fs = require('fs');
 const tsxc = require('@typescript-eslint/typescript-estree');
 
@@ -15,7 +14,7 @@ const parseFile = (fileName, parseFileCallback) => {
     let importsArray = []
     let constructorArray = []
     let className;
-    parsedContent.body.forEach(function (arrayItem) {
+    for (const arrayItem of parsedContent.body) {
         if (arrayItem.type === 'ImportDeclaration') {
             importedValue = []
             for (let i = 0; i < arrayItem.specifiers.length; i++) {
@@ -28,7 +27,7 @@ const parseFile = (fileName, parseFileCallback) => {
                 return (val.type === 'MethodDefinition') && (val.key.name === 'constructor')
             })
         }
-    });
+    };
     parseFileCallback(null, { className, importsArray, constructorArray })
 }
 

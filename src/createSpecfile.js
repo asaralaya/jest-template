@@ -6,7 +6,7 @@
   * @description - This method will be used to find every file with the desired extention, even if its deeply nested in subfolders using recursion.
   */
 const fs = require('fs');
-const chalk=require('chalk')
+const chalk = require('chalk')
 
 const createSpecfile = (fileName, parsedData, createSpecCallback) => {
     let indexPosition = fileName.lastIndexOf('.')
@@ -17,7 +17,7 @@ const createSpecfile = (fileName, parsedData, createSpecCallback) => {
     if (!fs.existsSync(specFilePath)) {
         const header = `/**
 * Description.
-* This spec file was created using jest-template plugin!
+* This spec file was created using ng-test-gen plugin!
 *
 */`
         const data = `
@@ -50,7 +50,7 @@ describe('${parsedData.className}', () => {
             if (err) {
                 createSpecCallback(new Error(chalk.red.bold("Failed to spec file for ", specFilePath)))
             } else {
-                console.log(chalk.green.bold("Spec file created ✅:"),chalk.green( specFilePath))
+                console.log(chalk.green.bold("Spec file created ✅:"), chalk.green(specFilePath))
                 createSpecCallback()
             }
         });

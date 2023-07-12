@@ -11,6 +11,7 @@ It currently supports **Jest** as the testing framework.
 
 ![mit](https://camo.githubusercontent.com/57b1ff17b6c633342f74f1da24a73fa090a8e9141b058f56d242b1ba4229e544/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f6e67782d73696d706c652d736c69636b "mit")
 ![actions](https://camo.githubusercontent.com/f0acbdace9431d2a168a8a53637655735a6fd6eee112155fd7f6daac3ff47f18/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d4769746875625f416374696f6e732d3230383846463f7374796c653d666c61742d737175617265266c6f676f3d6769746875622d616374696f6e73266c6f676f436f6c6f723d7768697465 "actions")
+[![Coverage Status](https://coveralls.io/repos/github/asaralaya/jest-template/badge.svg?branch=main)](https://coveralls.io/github/asaralaya/jest-template?branch=main)
 ---
 
 ---

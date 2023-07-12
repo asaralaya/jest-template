@@ -4,4 +4,4 @@ node_modules
 exampleFolder
 .DS_Store
 coverage
-
+dist

@@ -1,5 +1,5 @@
 const utils = require('../src/utils');
-const createSpecfile = require('../src/createSpecFile');
+const createSpecfile = require('../src/createSpecfile');
 const tsParser = require('../src/ts-parser/ts-parser');
 const mod = require('../src/templateBuilder');
 const async = require('async');

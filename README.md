@@ -1,12 +1,12 @@
-# Angular Test Generator
-
+# Angular Jest Spec Generator
 
 ![npm](https://img.shields.io/npm/v/node-keyword-scrapper.svg?style=for-the-badge&logo=npm "npm")
 ![js](https://camo.githubusercontent.com/9d07c04bdd98c662d5df9d4e1cc1de8446ffeaebca330feb161f1fb8e1188204/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4a6176615363726970742d4637444631453f7374796c653d666f722d7468652d6261646765266c6f676f3d6a617661736372697074266c6f676f436f6c6f723d626c61636b "js")
 ![node](https://camo.githubusercontent.com/dfc69d704694f22168bea3d84584663777fa5301dcad5bbcb5459b336da8d554/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6f64652e6a732d3433383533443f7374796c653d666f722d7468652d6261646765266c6f676f3d6e6f64652e6a73266c6f676f436f6c6f723d7768697465 "node")
 
 
-This plugin is designed to simplify the process of creating barebone structure for Angular spec files by analyzing the imports and constructor definitions of Angular components. 
+This plugin is designed to simplify the process of creating barebone structure for Angular spec files by analyzing the imports and constructor definitions of Angular components.
+This plugin is capable of generating spec files in the given folder recursively.
 It currently supports **Jest** as the testing framework.
 
 ![mit](https://camo.githubusercontent.com/57b1ff17b6c633342f74f1da24a73fa090a8e9141b058f56d242b1ba4229e544/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f6e67782d73696d706c652d736c69636b "mit")
@@ -17,14 +17,14 @@ It currently supports **Jest** as the testing framework.
 ---
 ## Installation
 
-To install the SpecFileGenerator plugin, follow these steps:
+To install the Angular Jest Spec Generator plugin, follow these steps:
 
 1. Open your Angular project in the terminal.
 
 2. Run the following command to install the plugin globally:
 
  ```   
- npm install -g ng-test-gen 
+ npm install -g ng-jest-spec
  ```
 
 ---
@@ -35,7 +35,7 @@ Once you have installed the plugin, you can use it to generate spec files for yo
 
 2. Run the following command to execute the Angular Test Generator:
  ```
-ng-test-gen
+ng-jest-spec
 ```  
 3. Follow the prompts and provide the inputs
 4. The plugin will analyze your Angular component,services' imports and constructor definitions and generate corresponding spec files in the appropriate directories if they doesnot exist already

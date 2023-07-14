@@ -1,7 +1,0 @@
-node_modules
-.prettierrc
-.gitignore
-exampleFolder
-.DS_Store
-coverage
-dist

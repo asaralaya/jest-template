@@ -17,8 +17,15 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
         run: npm ci
+
       - name: Test 🔧
         run: npm run test-coverage
+
+      - name: Posting LCOV coverage data to Coveralls
+        uses: coverallsapp/github-action@master
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+
       - name: Publish package on NPM 📦
         run: npm publish
         env:

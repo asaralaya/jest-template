@@ -8,7 +8,7 @@
     "build": "webpack --mode=production --node-env=production",
     "build:dev": "webpack --mode=development --watch",
     "test": "jest --silent",
-    "test-coverage": "jest --silent --coverage && coveralls < coverage/lcov.info"
+    "test-coverage": "jest --silent --coverage"
   },
   "repository": {
     "type": "git",

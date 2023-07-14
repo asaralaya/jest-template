@@ -51,6 +51,6 @@
   },
   "type": "commonjs",
   "bin": {
-    "jest-template": "./src/prompt.js"
+    "ng-jest-spec": "./src/prompt.js"
   }
 }

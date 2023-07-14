@@ -7,7 +7,7 @@
   * @param  {Array} exclusions - The folders that needs to be excluded from the search. Input is provided from the prompt
   **/
 const utils = require("./utils");
-const createSpecfile = require("./createSpecFile");
+const createSpecfile = require("./createSpecfile");
 const tsParser = require("./ts-parser/ts-parser");
 const async = require('async');
 const chalk = require('chalk');

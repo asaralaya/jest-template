@@ -24,7 +24,7 @@ To install the Angular Jest Spec Generator plugin, follow these steps:
 2. Run the following command to install the plugin globally:
 
  ```   
- npm install -g ng-test-gen
+ npm install -g ng-test-barrel
  ```
 
 ---
@@ -35,7 +35,7 @@ Once you have installed the plugin, you can use it to generate spec files for yo
 
 2. Run the following command to execute the Angular Test Generator:
  ```
-ng-test-gen
+ng-test-barrel
 ```  
 3. Follow the prompts and provide the inputs
 4. The plugin will analyze your Angular component,services' imports and constructor definitions and generate corresponding spec files in the appropriate directories if they doesnot exist already

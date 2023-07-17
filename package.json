@@ -1,5 +1,5 @@
 {
-  "name": "ng-test-gen",
+  "name": "ng-test-barrel",
   "version": "1.0.0",
   "description": "Package for generating bare-bone structure for unit test spec files!",
   "main": "dist/bundle.js",
@@ -54,6 +54,6 @@
   },
   "type": "commonjs",
   "bin": {
-    "ng-test-gen": "./dist/bundle.js"
+    "ng-test-barrel": "./dist/bundle.js"
   }
 }

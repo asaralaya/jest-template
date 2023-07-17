@@ -17,7 +17,7 @@ const createSpecfile = (fileName, parsedData, createSpecCallback) => {
     if (!fs.existsSync(specFilePath)) {
         const header = `/**
 * Description.
-* This spec file was created using ng-jest-spec plugin!
+* This spec file was created using ng-test-gen plugin!
 *
 */`
         const data = `

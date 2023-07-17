@@ -1,6 +1,6 @@
 {
-  "name": "ng-jest-spec",
-  "version": "1.0.1",
+  "name": "ng-test-gen",
+  "version": "1.0.0",
   "description": "Package for generating bare-bone structure for unit test spec files!",
   "main": "dist/bundle.js",
   "module": "dist/bundle.js",
@@ -54,6 +54,6 @@
   },
   "type": "commonjs",
   "bin": {
-    "ng-jest-spec": "./dist/bundle.js"
+    "ng-test-gen": "./dist/bundle.js"
   }
 }

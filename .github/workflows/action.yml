@@ -27,6 +27,7 @@ jobs:
           github-token: ${{secrets.GITHUB_TOKEN}}
 
       - name: Publish package on NPM 📦
+        run: npm run build
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

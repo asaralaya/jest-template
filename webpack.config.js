@@ -1,7 +1,7 @@
 const path = require("path")
 
 module.exports = {
-  entry: path.resolve(__dirname, "src/prompt.js"),
+  entry: path.resolve(__dirname, "src/templateBuilder.js"),
   target: 'node',
   output: {
     path: path.resolve(__dirname, "dist"),

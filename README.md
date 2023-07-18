@@ -52,6 +52,10 @@ ng-test-barrel
 | `3.exclusion-path` | optional field-  the folders/files that need to be excluded from the search | ```./src/app/components/test```|
 
 ---
+## Example
+<img src="docs/example.png" width="800">
+
+---
 ## License
 
 This project is licensed under the MIT License. See LICENSE for more information.

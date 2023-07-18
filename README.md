@@ -53,7 +53,7 @@ ng-test-barrel
 
 ---
 ## Example
-<img src="docs/example.png" width="800">
+<img src="https://github.com/asaralaya/jest-template/blob/main/docs/example.png" width="800">
 
 ---
 ## License

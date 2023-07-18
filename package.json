@@ -1,6 +1,6 @@
 {
     "name": "ng-test-barrel",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "description": "Package for generating bare-bone structure for unit test spec files!",
     "main": "dist/bundle.js",
     "module": "dist/bundle.js",

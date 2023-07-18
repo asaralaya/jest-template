@@ -17,7 +17,7 @@ It currently supports **Jest** as the testing framework.
 ---
 ## Installation
 
-To install the Angular Jest Spec Generator plugin, follow these steps:
+To install the Angular Test Generator plugin, follow these steps:
 
 1. Open your Angular project in the terminal.
 
